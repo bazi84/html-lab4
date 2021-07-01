@@ -1,15 +1,14 @@
+function getTime(){
+    let today = new Date();
+    let hourNow = today.getHours();
+    let greeting;
 
+    if (hourNow>18) {greeting = 'Good Evening';}
+    else if (hourNow > 11) {greeting = 'Good Afternoon';}
+    else if (hourNow >=0) {greeting = 'Good Morning';}
+    else {greeting = 'Welcome';}
 
-let userName = 'Roger'
-let userAge = 45;
+    document.write('<h2>' + greeting + '!</h2>')
+}
 
-console.log(userName)
-console.log(userAge)
-
-userAge =21
-console.log(userAge)
-
-userName = prompt ('Please Enter Your name');
-console.log(userName)
-
-document.write('<h2>' + 'Welcome' + userName + '!</h2>')
+getTime();
